@@ -21,9 +21,9 @@ export function BackgroundBeamsWithCollisionDemo() {
             </h2>
             {/* Buttons Section */}
             <div className="flex justify-center gap-10 mt-8">
-                <button className="px-6 py-3 bg-purple-600 text-white font-medium rounded-md shadow-md hover:bg-purple-700 transition">
+                <Link href="/about" className="px-6 py-3 bg-purple-600 text-white font-medium rounded-md shadow-md hover:bg-purple-700 transition">
                     Learn More
-                </button>
+                </Link>
                 <Link href="https://form.jotform.com/242584794523062" target="_blank" className="p-[3px] relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
                     <div className="px-8 py-2 font-medium bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">

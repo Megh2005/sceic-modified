@@ -1,8 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiMenu, FiX, FiHome, FiInfo, FiBriefcase, FiMail, FiFeather, FiCalendar } from "react-icons/fi";
+import {
+    FiMenu,
+    FiX,
+    FiHome,
+    FiInfo,
+    FiBriefcase,
+    FiMail,
+    FiFeather,
+    FiCalendar,
+} from "react-icons/fi";
+import Link from "next/link";
 
 const menuItems = [
     {
@@ -41,11 +51,19 @@ const menuItems = [
         href: "https://www.theheritage.ac.in/events/SCEIC.aspx",
         icon: <FiBriefcase />,
         isButton: true,
-    }
+    },
 ];
 
 const NavMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [activeMenu, setActiveMenu] = useState("");
+
+    useEffect(() => {
+        // Set the active menu based on the current pathname
+        const currentPath = window.location.pathname;
+        const activeItem = menuItems.find((item) => item.href === currentPath);
+        setActiveMenu(activeItem ? activeItem.name : "");
+    }, []);
 
     const toggleMenu = () => {
         setIsOpen((prev) => !prev);
@@ -56,14 +74,14 @@ const NavMenu = () => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 0.5,
+                duration: 1,
             },
         },
         closed: {
             opacity: 0,
             x: "-100%",
             transition: {
-                duration: 0.5,
+                duration: 1,
             },
         },
     };
@@ -72,13 +90,18 @@ const NavMenu = () => {
         <nav className="bg-gray-800 text-white">
             {/* Desktop and Mobile Header */}
             <div className="flex items-center justify-between px-6 py-4">
-                <div className="text-xl font-bold">SCEIC - 2025</div>
+                <Link href="/" className="text-xl font-bold">SCEIC - 2025</Link>
                 <div className="hidden md:flex space-x-6">
                     {menuItems.map((item) => (
                         <a
                             key={item.name}
                             href={item.href}
-                            className={`flex items-center space-x-2 hover:text-gray-400 ${item.isButton ? "bg-indigo-600 text-white py-2 px-4 rounded-full" : ""
+                            className={`flex items-center space-x-2 ${activeMenu === item.name
+                                ? "text-yellow-400"
+                                : "hover:text-gray-400"
+                                } ${item.isButton
+                                    ? "bg-indigo-600 text-white py-2 px-4 rounded-full"
+                                    : ""
                                 }`}
                             target={item.isButton ? "_blank" : "_self"} // Open register link in a new tab
                             rel="noopener noreferrer"
@@ -113,7 +136,12 @@ const NavMenu = () => {
                             <a
                                 href={item.href}
                                 onClick={toggleMenu}
-                                className={`flex items-center space-x-2 hover:text-gray-400 ${item.isButton ? "bg-indigo-600 text-white py-2 px-4 rounded-full" : ""
+                                className={`flex items-center space-x-2 ${activeMenu === item.name
+                                    ? "text-yellow-400"
+                                    : "hover:text-gray-400"
+                                    } ${item.isButton
+                                        ? "bg-indigo-600 text-white py-2 px-4 rounded-full"
+                                        : ""
                                     }`}
                                 target={item.isButton ? "_blank" : "_self"} // Open register link in a new tab
                                 rel="noopener noreferrer"
