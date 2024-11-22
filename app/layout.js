@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavigationMenuDemo from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
         >
           <NavigationMenuDemo /> 
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
