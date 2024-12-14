@@ -27,7 +27,7 @@ export default function TimelineDemo() {
             ),
         },
         {
-            title: "January 1, 2024",
+            title: "January 1, 2025",
             content: (
                 <div>
                     <p
