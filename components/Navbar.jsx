@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { GiPublicSpeaker } from "react-icons/gi";
 import {
   FiMenu,
   FiX,
@@ -32,6 +33,12 @@ const menuItems = [
     label: "Themes",
     href: "/themes",
     icon: <FiFeather />,
+  },
+  {
+    name: "speakers",
+    label: "Speakers",
+    href: "/speakers",
+    icon: <GiPublicSpeaker />,
   },
   {
     name: "calendar",
