@@ -5,7 +5,7 @@ import React from "react";
 export default function TimelineDemo() {
     const data = [
         {
-            title: "December 20, 2024",
+            title: "December 31, 2024",
             content: (
                 <div>
                     <p
