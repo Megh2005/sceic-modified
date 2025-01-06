@@ -52,13 +52,6 @@ const menuItems = [
     href: "/contact",
     icon: <FiMail />,
   },
-  {
-    name: "register",
-    label: "Register",
-    href: "https://www.theheritage.ac.in/events/SCEIC.aspx",
-    icon: <FiBriefcase />,
-    isButton: true,
-  },
 ];
 
 const NavMenu = () => {
