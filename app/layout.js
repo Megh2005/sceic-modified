@@ -1,4 +1,3 @@
-import localFont from "next/font/local";
 import { Roboto_Slab } from 'next/font/google'
 import "./globals.css";
 import NavigationMenuDemo from "@/components/Navbar";

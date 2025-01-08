@@ -13,6 +13,7 @@ import {
   FiFeather,
   FiCalendar,
 } from "react-icons/fi";
+import { FaFileDownload } from "react-icons/fa";
 import Link from "next/link";
 
 const menuItems = [
@@ -41,6 +42,12 @@ const menuItems = [
     icon: <GiPublicSpeaker />,
   },
   {
+    name: "Agenda",
+    label: "Agenda",
+    href: "/agenda",
+    icon: <FiBriefcase />,
+  },
+  {
     name: "calendar",
     label: "Calendar",
     href: "/calendar",
@@ -51,6 +58,13 @@ const menuItems = [
     label: "Contact",
     href: "/contact",
     icon: <FiMail />,
+  },
+  {
+    name: "download",
+    label: "Download Agenda",
+    href: "https://imagekit.io/public/share/iammeghdeb/82617b9c0e6c5ae48e5a853a8edc4d820c40147782592eb40d610dee73910e20fce0345e331120fdf4d6d9673cb30396a7b8560162e0c4fcb566ea9e8f421e0f768980eb33be4375298362639ca57bc6",
+    icon: <FaFileDownload />,
+    isButton: true,
   },
 ];
 
