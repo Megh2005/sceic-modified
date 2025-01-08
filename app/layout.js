@@ -28,6 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <meta name="theme-color" content="#1bf551" />
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
