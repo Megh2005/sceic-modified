@@ -1,19 +1,11 @@
 import localFont from "next/font/local";
+import { Roboto_Slab } from 'next/font/google'
 import "./globals.css";
 import NavigationMenuDemo from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "react-hot-toast";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Roboto_Slab({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata = {
   title: "SCEIC - 2025",
@@ -31,7 +23,7 @@ export default function RootLayout({ children }) {
       <meta name="theme-color" content="#1bf551" />
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={inter.className}
       >
         <ThemeProvider
           attribute="class"
