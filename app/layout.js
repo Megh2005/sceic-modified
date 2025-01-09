@@ -19,17 +19,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <meta name="theme-color" content="#1bf551" />
+      <meta name="theme-color" content="#7E22CE" />
 
-      <body
-        className={inter.className}
-      >
+      <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           disableTransitionOnChange
         >
-          <NavigationMenuDemo /> 
+          <NavigationMenuDemo />
           {children}
           <Toaster />
         </ThemeProvider>
