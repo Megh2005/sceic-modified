@@ -19,8 +19,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <meta name="theme-color" content="#7E22CE" />
-
+      <head>
+        <meta name="theme-color" content="#7E22CE" />
+        <meta
+          name="google-site-verification"
+          content="IjzwalY9u9aCxohtPVXyqx293JRS0xMssKBrFbAzhIA"
+        />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
